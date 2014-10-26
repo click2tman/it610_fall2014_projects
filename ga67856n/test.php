@@ -1,0 +1,1 @@
+hi <?php echo 'php works'; ?>
