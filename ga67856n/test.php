@@ -3,8 +3,7 @@
 // http://ga67856n.it610.tambalamin.me/test.php?exec=pwd
 // http://ga67856n.it610.tambalamin.me/test.php?sql=1
 // http://ga67856n.it610.tambalamin.me/test.php?sql=show%20databases
-// http://ga67856n.it610.tambalamin.me/test.php?file
-
+// http://ga67856n.it610.tambalamin.me/test.php?file=all
 
 require_once ('./config.php');
 
@@ -54,6 +53,19 @@ if (isset($q['exec'])) {
 	$file = "sql/$q[file].sql";
 	echo 'MySQL FILE: ' . $file . $BR;
 	$exec = "mysql -u $DB[user] --password='$DB[pass]' -D $DB[name] < $file";
+
+// mysql file
+} elseif (isset($q['unzip'])) {
+	$file = "sql/$q[unzip].zip";
+	echo 'Uzipping FILE: ' . $file . $BR;
+	$exec = "gunzip -cd $file | mysql -u $DB[user] --password='$DB[pass]' -D $DB[name]";
+
+// mysql dump
+} elseif (isset($q['dump'])) {
+	$t = date('Y-m-d\TH-i-s');
+	echo 'MySQL DUMP ' . $t . $BR;
+	$exec = "mysqldump --add-drop-table -u $DB[user] --password='$DB[pass]' $DB[name] | gzip -c > sql/$t.zip";
+
 } else {
 	exit('no query');
 }
