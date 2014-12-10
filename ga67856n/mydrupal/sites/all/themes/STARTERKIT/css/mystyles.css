@@ -1,3 +1,50 @@
 body {
     background: #eff;
 }
+h1#site-name.header__site-name a {
+    padding: 0 0 0 10px;
+    display: block;
+    color: orange;
+    margin: 0;
+}
+h1#site-name.header__site-name a:hover {
+    text-decoration: none;
+}
+div#site-slogan {
+    color: green;
+    display: block;
+    padding: 0 0 0 10px;
+    margin: 0;
+    font-style: italic;
+}
+nav#main-menu a {
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    background: orange;
+}
+nav#main-menu a:hover {
+    background: yellow;
+    text-decoration: underline;
+}
+.feed-icon {
+    display: none;
+}
+.node-promoted.node-teaser {
+    background: lightyellow;
+    width: 300px;
+    margin: 10px;
+    border: 1px solid lightcoral;
+    padding: 10px;
+    display: inline-block;
+    float: left;
+    height: 200px;
+    overflow: scroll;
+}
+p.submitted {
+    font: 10px Verdana;
+    color: gray;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+}
