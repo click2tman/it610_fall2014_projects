@@ -1,31 +1,36 @@
 body {
     background: #eff;
+    margin: 30px 0;
 }
 h1#site-name.header__site-name a {
     padding: 0 0 0 10px;
-    display: block;
     color: orange;
-    margin: 0;
+    display: block;
+    margin: 0 0 0 10px;
 }
-h1#site-name.header__site-name a:hover {
-    text-decoration: none;
-}
-div#site-slogan {
-    color: green;
+h1#site-name.header__site-name a:hover {} div#site-slogan {
+    text-align: right;
+    color: lightskyblue;
     display: block;
     padding: 0 0 0 10px;
-    margin: 0;
+    margin: 0 0 10px 0;
     font-style: italic;
 }
 nav#main-menu a {
+    color: yellow;
     padding: 10px;
     display: block;
     text-decoration: none;
-    background: orange;
+    background: lightskyblue;
+}
+nav#main-menu a.active-trail, nav#main-menu a.active-trail:hover {
+    color: black;
+        text-decoration: none;
+
 }
 nav#main-menu a:hover {
-    background: yellow;
     text-decoration: underline;
+    color: #ff0;
 }
 .feed-icon {
     display: none;
@@ -47,4 +52,21 @@ p.submitted {
     font-style: italic;
     margin: 0;
     padding: 0;
+}
+a {
+    color: orange;
+    text-decoration: none;
+}
+a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+form label {
+    font-weight: normal;
+}
+form input {
+    padding: 5px;
+}
+.form-item {
+    margin: 0;
 }
