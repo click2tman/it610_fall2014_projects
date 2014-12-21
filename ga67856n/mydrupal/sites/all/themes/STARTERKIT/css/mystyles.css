@@ -70,3 +70,7 @@ form input {
 .form-item {
     margin: 0;
 }
+.region-footer {
+    color: lightgray;
+    font-size: small;
+}
