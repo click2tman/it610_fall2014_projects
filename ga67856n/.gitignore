@@ -1,0 +1,5 @@
+# Ignore configuration files that may contain sensitive information.
+.DS_Store
+myjoomla/configuration.php
+mywp/wp-config.php
+sftp-config.json
